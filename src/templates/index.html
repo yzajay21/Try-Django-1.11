@@ -1,0 +1,115 @@
+{% extends 'layout/layout_main_page.html' %}
+{% load staticfiles %}
+
+{% block container %}
+
+<div id="fh5co-page">
+	<aside id="fh5co-hero" class="js-fullheight">
+		<div class="flexslider js-fullheight">
+		<ul class="slides">
+			<li style="background-image: url({% static 'images/camera.jpg' %});">
+				<div class="overlay-gradient"></div>
+				<div class="container">
+					<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+						<div class="slider-text-inner">
+						   	<h2>Photography is the</h2><br>
+						   	<h2> beauty !!</h2>
+						   	<h2>of life captured</h2>
+						   	<p><a href="{% url 'gallary' %}" class="btn btn-primary btn-lg">Get started</a></p>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="background-image:url({% static 'images/apple3.jpeg' %});">
+				<div class="container">
+					<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+						<div class="slider-text-inner">
+						   	<h2>Let's make a Website that build your Business</h2>
+						   	<p><a href="{% url 'WebdevView' %}" class="btn btn-primary btn-lg">Get started</a></p>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="background-image:url({% static 'images/mob.jpeg' %});">
+				<div class="container">
+					<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+						<div class="slider-text-inner">
+						    <h2>We create solutions that enhance your business !!</h2>
+						   	<p><a href="{% url 'SoftwareView' %}" class="btn btn-primary btn-lg">Get started</a></p>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	</aside>
+	<div id="fh5co-services-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+					<h2>Our Awesome Features</h2>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-laptop"></i>
+						<div class="desc">
+							<h3>Web Developement</h3>
+							<p>We provide Secure Websites Dyanamic features,professional web designs and Awesome Ecommerce features.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-android"></i>
+						<div class="desc">
+								<h3>Android Developement</h3>
+								<p>We Offers a range of Android compatible mobile applications that not only simplifying your life but also the amplifies your future.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-apple"></i>
+						<div class="desc">
+								<h3>Ios Developement</h3>
+								<p>We create high-tech Iphone appliaction that automate your business and ensures realiable service to end-user.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-tablet"></i>
+						<div class="desc">
+							<h3>SEO</h3>
+							<p>SEO is one of the most cost-effective marketing strategies because it targets users who are actively looking for your products and services online </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-camera"></i>
+						<div class="desc">
+							<h3>Photography</h3>
+							<p>Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… It remembers little things, long after you have forgotten everything.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-pie-chart"></i>
+						<div class="desc">
+							<h3>Business Analytics</h3>
+							<p>Business Analytics is used to gain insights that inform business decisions and can be used to automate and optimize business processes.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+{% endblock %}

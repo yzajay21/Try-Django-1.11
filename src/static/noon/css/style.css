@@ -1,0 +1,87 @@
+
+html {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+
+
+/*==========================================
+PRE LOADER 
+==========================================*/
+
+
+
+
+.btn {
+	border: 1px solid #fff;
+	display: inline-block;
+	min-width: 160px;
+	padding: .9em;
+	height: 50px;
+	text-align: center;
+	color: white;
+	font-style: normal;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0;
+	font-size: 16px;
+	font-weight: 300;
+}
+.btn:hover {
+	background-color: #BD9E6F;
+	color: #fff;
+	text-decoration: none;
+}
+
+.pink-btn {
+	background: #e0356e;
+	border: none;
+	margin-left: 10px;
+}
+
+.pink-btn:hover {
+
+	background-color: #f79b23;
+	color: #fff;
+	text-decoration: none;
+}
+
+.scrolldown {
+	padding-top: 24px;
+}
+
+
+.abouts_content{
+	padding:120px 0px;
+	overflow:hidden;
+}
+.single_abouts_img{}
+.single_abouts_text{
+	margin-top:40%;
+}
+.single_abouts_text h2{
+	margin-bottom:20px;
+}
+/* Feature section */
+.features{
+	background:#F8F9FB;
+}
+.main_features{
+	padding:120px 0px;
+	overflow:hidden;
+}
+.single_features_text{
+	margin-top:35%;
+}
+
+
+
+/* works Section */
+
+
+
+
+
+
+

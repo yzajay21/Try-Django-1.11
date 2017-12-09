@@ -1,0 +1,134 @@
+{% extends 'layout/layout_photography_page.html' %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'photoswipe/css/photoswipe.css' %}"> 
+    <link rel="stylesheet" href="{% static 'photoswipe/css/default-skin/default-skin.css' %}"> 
+{% endblock %}    
+{% block content %}
+    <div id="fh5co-main">
+        <div class="fh5co-overlay-mobile"></div>
+        <div id="fh5co-home" class="js-fullheight" data-section="home">
+            <div class="flexslider">
+                <div class="fh5co-overlay"></div>
+                <div class="fh5co-text">
+                    <div class="container">
+                        <div class="row text-center">
+                            <h1 class="animate-box">{{ album.title }}</h1>
+                            <div class="fh5co-go animate-box">
+                                <a href="#" class="js-fh5co-next">
+                                    View Images
+                                    <span><i class="icon-arrow-down2"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="slides">
+                {% for item in images %}
+                <li class='saquib' style="background-image: url({{ item.image.url }});" data-stellar-background-ratio="0.5"></li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div id="fh5co-content">
+            <div class="container">
+                <div class="row r-pb">
+                    <div class="col-md-8 col-md-offset-2 text-center section-heading">
+                        <h2 class="fh5co-section-title animate-box">Intro Text</h2>
+                        <p class="fh5co-lead animate-box">{{ album.description }}</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <section class="col s12 m12 l10 offset-l1">
+                        {% for item in images %}
+                        <a class="class="col s12 m3" href="javascript:pswpInit({{ forloop.counter0 }});">
+                        <img src="{{ item.thumb.url }}" class="responsive-img dpg-album-image" alt="{{ item.alt }}" />
+                        </a>
+                        {% endfor %}
+                    </section>
+                </div>
+            </div>
+        </div> 
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+            <!-- Background of PhotoSwipe. 
+                 It's a separate element as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+
+                <!-- Container that holds slides. 
+                    PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                    Don't modify these 3 pswp__item elements, data is added later on. -->
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+
+                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                <div class="pswp__ui pswp__ui--hidden">
+
+                    <div class="pswp__top-bar">
+
+                        <!--  Controls are self-explanatory. Order can be changed. -->
+
+                        <div class="pswp__counter"></div>
+
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                              <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div> 
+                    </div>
+
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}      
+
+{% block js %}
+    <script>
+        // build the json album images collection 
+        window.djangoAlbumImages = [
+            {% for item in images %}
+                {
+                    src: '{{ item.image.url }}',
+                    w:  {{ item.width }},
+                    h:  {{ item.height }}
+                },
+            {% endfor %}
+        ];
+    </script>
+    <script src="{% static 'photoswipe/css/photoswipe.min.js' %}"></script> 
+    <script src="{% static 'photoswipe/css/photoswipe-ui-default.min.js' %}"></script>
+{% endblock %}

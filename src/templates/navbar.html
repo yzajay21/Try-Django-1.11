@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+<div id="fh5co-page">
+<header id="fh5co-header" role="banner">
+	<div class="container">
+		<div class="header-inner">
+			<h1><h1><a  href="{% url 'photo_list' %}">24MotionPictures</a></h1>
+			<nav role="navigation">
+				<ul>
+					<li><a href="{% url 'gallary' %}">PhotoGraphy</a></li>
+					<li><a href="{% url 'WebdevView' %}">Web Development</a></li>
+					<li><a href="{% url 'SoftwareView' %}">Software</a></li>
+					<!--<li><a href="about.html">Production</a></li>-->
+					<!--<li><a href="{% url 'contact' %}">Contact</a></li>-->
+					<li class="cta"><a href="{% url 'contact' %}">Contact US</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+</div>
+

@@ -1,0 +1,133 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="24Motion Pictures is Compnay of making websites and android apps and ios apps.Its Gives Buisness Solutions And Its Offers Prewedding Photography and Wedding Photography and Videography" />
+    <meta name="keywords" content="Photography,Prewedding,Wedding,Portfolio"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" type ="image/png" href="{% static 'images/favicon.png' %}" >
+    
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
+    <!-- Animate -->
+    <script src="https://use.fontawesome.com/9b7454109a.js"></script>
+    <link rel="stylesheet" href="{% static 'photography/css/animate1.css' %}">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="{% static 'photography/css/flexslider1.css' %}">
+    <!-- Icomoon -->
+    <link rel="stylesheet" href="{% static 'photography/css/icomoon1.css' %}">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+    <link rel="stylesheet" href="{% static 'photography/css/style1.css' %}">
+    
+        
+    <!-- Modernizr JS -->
+    
+    {% block css %}{% endblock %}
+
+    
+<body>
+    <script type='application/ld+json'> 
+{
+  "@context": "http://www.schema.org",
+  "@type": "LocalBusiness",
+  "name": "24MotionPictures",
+  "url": "http://www.24motionpicture.com",
+  "logo": "https://www.facebook.com/24motionpictures/photos/a.341832392654056.1073741825.341831835987445/341832405987388/?type=1&theater",
+  "image": "https://www.facebook.com/24motionpictures/photos/a.341832392654056.1073741825.341831835987445/341832405987388/?type=1&theater",
+  "description": "24MotionPicture is Company Of Makes Pre Wedding ,Shoots At Wedding,Shoots Professional Portfolio.And do VFX and Motion Graphics Animations.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ruston colony,Chinchwad Pune",
+    "postOfficeBoxNumber": "Chinchwad",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411033",
+    "addressCountry": "India"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "18.636656",
+    "longitude": "73.776817"
+  },
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa 08:00-22:00",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91(976)-368-339",
+    "contactType": "technical support"
+  }
+}
+ </script>
+<div id="fh5co-header">
+    <div class="container">
+        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <div id="fh5co-logo">
+                <a href="{% url 'photo_list' %}">24MotionPictures<span>.</span></a>
+                    
+            </div>
+            <nav id="fh5co-main-nav">
+                
+            </nav>
+    </div>
+</div>
+
+{% block content %}{% endblock %}
+    
+    {% block js %}{% endblock %}
+
+    <footer id="fh5co-footer" role="contentinfo">
+        <div class="container">
+        <div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+          <h3>Contact Us</h3>
+          <p>Ruston Colony,Chinchwad Pune-411033</p>
+          <p><a href="#" class="btn btn-primary btn-outline with-arrow btn-sm">Join Us <i class="icon-arrow-right"></i></a></p>
+        </div>
+        <div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+          <h3>Our Services</h3>
+        <ul class="float">
+            <li><a href="{% url 'WebdevView' %}">Web Development</a></li>
+            <li><a href="{% url 'SoftwareView' %}">Software Development</a></li>
+            <li><a href="{% url 'gallary' %}">Photography</a></li>
+
+        </ul>
+        </div>
+
+        <div class="col-md-2 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+          <h3>Follow Us</h3>
+          <ul class="fh5co-social">
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/24motionpictures/"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="https://www.instagram.com/24_motion_pictures/?hl=en"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+    </div>
+    </footer>
+    <script src="{% static 'photography/js/modernizr1.min.js' %}"></script>
+    <!--js Files-->
+    <script src="{% static 'photography/js/jquery.min1.js' %}"></script>
+    <!-- jQuery Easing -->
+    <script src="{% static 'photography/js/jquery.easing.1.31.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'photography/js/bootstrap.min1.js' %}"></script>
+    <!-- Waypoints -->
+    <script src="{% static 'photography/js/jquery.waypoints.min1.js' %}"></script>
+    <!-- Stellar Parallax -->
+    <script src="{% static 'photography/js/jquery.stellar.min.js' %}"></script>
+    <!-- Flexslider -->
+    <script src="{% static 'photography/js/jquery.flexslider-min1.js' %}"></script>
+    <!-- Main JS -->
+    <script src="{% static 'photography/js/main1.js' %}"></script>
+    <script src="{% static 'photoswipe/material/js/jquery.datetimepicker.js' %}"></script>
+    <script src="{% static 'photoswipe/material/js/jquery.formset.js' %}"></script>
+    <script src="{% static 'photoswipe/material/js/materialize.js' %}"></script>
+    <script src="{% static 'photoswipe/material/js/materialize.forms.js' %}"></script>
+    <script src="{% static 'photoswipe/js/app.js' %}"></script>
+</body>
+</html>

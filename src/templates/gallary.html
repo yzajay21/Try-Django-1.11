@@ -1,0 +1,58 @@
+{% extends "layout/layout_photography_page.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'photoswipe/css/photoswipe.css' %}"> 
+    <link rel="stylesheet" href="{% static 'photoswipe/css/default-skin/default-skin.css' %}"> 
+{% endblock %}  
+{% block content %}
+<div id="fh5co-main">
+    <div class="fh5co-overlay-mobile"></div>
+        <div id="fh5co-home" class="js-fullheight" data-section="home">
+            <div class="flexslider">
+                <div class="fh5co-overlay"></div>
+                <div class="fh5co-text">
+                    <div class="container">
+                        <div class="row text-center">
+                            <h1 class="animate-box">We love to tell your story</h1>
+                            <div class="fh5co-go animate-box">
+                                <a href="#" class="js-fh5co-next">
+                                    See Portfolio
+                                <span><i class="icon-arrow-down2"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <ul class="slides">
+                        <li style="background-image:url({% static 'images/bridal.jpg' %});" data-stellar-background-ratio="0.5"></li>
+                        <li style="background-image: url({% static 'images/henna.jpg' %});" data-stellar-background-ratio="0.5"></li>
+                         <li style="background-image: url({% static 'images/wedding.jpg' %});" data-stellar-background-ratio="0.5"></li>
+                    </ul>
+            </div>
+        </div>
+    	<div id="fh5co-portfolio" data-section="portfolio">
+			<div class="container">
+				<div class="row r-pb">
+					<div class="col-md-8 col-md-offset-2 text-center section-heading">
+						<h1>Portfolio</h1>
+						<p class="fh5co-lead animate-box"> Every Picture Has a story to tell. </p>
+					</div>
+				</div>
+				<div class="row">
+       			{% for album in albums %}
+				<div class="col-md-4 col-sm-4 col-xs-6 col-xxs-12 animate-box">
+	            	<div class="img-grid">
+	                	<img src="{{ album.thumb.url }}" alt="{{ album.title }}" class="img-responsive" />
+	                	<a href="{% url 'album' album.slug %}"></a>
+	                </div>
+	                <div class="card-content">
+	                    <span class="card-title">{{ album.title }}</span>
+	                   	
+	                </div>
+	            </div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

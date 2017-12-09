@@ -1,0 +1,99 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+	<html class="no-js">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{% block title %}24MotionPictures {% endblock %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="24Motion Pictures is Compnay of making websites and android apps and ios apps.Its Gives Buisness Solutions And Its Offers Prewedding Photography and Wedding Photography and Videography" />
+	<meta name="keywords" content="Websites Development,Website Design,Dynamic Webite,E-Commerce webites,Android App,Ios APP Development,"/>
+
+	<!-- Google Tag Manager -->
+	
+
+<!-- End Google Tag Manager -->
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	
+	<script src="https://use.fontawesome.com/9b7454109a.js"></script>
+	<link rel="shortcut icon" type ="image/png" href="{% static 'images/favicon.png' %}" >
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	
+	<!-- ranger-->
+	
+	
+	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+	<!-- jQuery -->
+	
+	
+	</head>
+	<body>
+		<script type='application/ld+json'> 
+			{
+				  "@context": "http://www.schema.org",
+				  "@type": "LocalBusiness",
+				  "name": "24MotionPictures",
+				  "url": "http://www.24motionpicture.com",
+				  "logo": "https://www.facebook.com/24motionpictures/photos/a.341832392654056.1073741825.341831835987445/341832405987388/?type=1&theater",
+				  "image": "https://www.facebook.com/24motionpictures/photos/a.341832392654056.1073741825.341831835987445/341832405987388/?type=1&theater",
+				  "description": "24MotionPicture is Company Of  developing Websites and Mobile Application and Which offers various features to Websites like Static,Dynamic Websites,SEO,E-Commerce Websites,And Native Applications in Android and Ios.\nWhich Provides Solution to small buisness.",
+				  "address": {
+				    "@type": "PostalAddress",
+				    "streetAddress": "Ruston colony,Chinchwad Pune",
+				    "postOfficeBoxNumber": "Chinchwad",
+				    "addressLocality": "Pune",
+				    "addressRegion": "Maharashtra",
+				    "postalCode": "411033",
+				    "addressCountry": "India"
+				  },
+				  "geo": {
+				    "@type": "GeoCoordinates",
+				    "latitude": "18.636656",
+				    "longitude": "73.776817"
+				  },
+				  "openingHours": "Mo, Tu, We, Th, Fr, Sa 08:00-22:00",
+				  "contactPoint": {
+				    "@type": "ContactPoint",
+				    "telephone": "+91(976)-368-339",
+				    "contactType": "technical support"
+				  }
+				}
+ 		</script>
+	
+	{% include 'navbar.html' %}
+	{% block container %}
+	{% endblock %}
+
+	{% include 'footer.html' %}
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Owl Carousel -->
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<!-- Flexslider -->
+	<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+
+	<!-- MAIN JS -->
+	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'js/jquery-3.2.1.min.map'  %}"></script>
+	
+	<script src="{% static 'js/modernizr-2.6.2.min.js'  %}"></script>
+	</body>
+	</html>

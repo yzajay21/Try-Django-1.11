@@ -1,0 +1,93 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+ <html class="no-js"> 
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>24MotionPictures</title>
+	<meta name="description" content="24Motion Pictures is Compnay of making websites and android apps and ios apps.Its Gives Buisness Soluttions to small Business with Android,Ios And Dyanamic and E-Commerce Apps" />
+	<meta name="keywords" content="Websites Development,Website Design,Dynamic Webite,E-Commerce webites,Android App,Ios APP Development,"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
+	<link rel="shortcut icon" type ="image/png" href="{% static 'images/favicon.png' %}" >
+	<!-- Animate.css -->
+	
+	<link rel="stylesheet" href="{% static 'ranger/css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'noon/css/animate.min.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'ranger/css/icomoon.css' %}">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="{% static 'ranger/css/simple-line-icons.css' %}">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{% static 'ranger/css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'ranger/css/owl.theme.default.min.css' %}">
+	
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'noon/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'noon/css/responsive.css' %}">
+	<link rel="stylesheet" href="{% static 'ranger/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'noon/css/style.css' %}">
+	
+	<!-- Modernizr JS -->
+	<script src="{% static 'ranger/js/modernizr-2.6.2.min.js' %}"></script>
+	
+
+	</head>
+	<body>
+		<script type='application/ld+json'> 
+			{
+			  "@context": "http://www.schema.org",
+			  "@type": "LocalBusiness",
+			  "name": "24MotionPictures",
+			  "url": "http://www.24motionpicture.com",
+			  "logo": "https://www.facebook.com/24motionpictures/photos/a.341832392654056.1073741825.341831835987445/341832405987388/?type=1&theater",
+			  "image": "https://www.facebook.com/24motionpictures/photos/a.341832392654056.1073741825.341831835987445/341832405987388/?type=1&theater",
+			  "description": "24MotionPictures is Company develop websites with awesome features it gives static, dynamic and E-Commerce websites.It develop Android Application and ios Appliactions. With Real-time database,responsive designs  and native Applications.Gives the Business Solution to Small businesses",
+			  "address": {
+			    "@type": "PostalAddress",
+			    "streetAddress": "Ruston colony,Chinchwad Pune",
+			    "postOfficeBoxNumber": "Chinchwad",
+			    "addressLocality": "Pune",
+			    "addressRegion": "Maharashtra",
+			    "postalCode": "411033",
+			    "addressCountry": "India"
+			  },
+			  "geo": {
+			    "@type": "GeoCoordinates",
+			    "latitude": "18.636656",
+			    "longitude": "73.776817"
+			  },
+			  "openingHours": "Mo, Tu, We, Th, Fr, Sa 08:00-22:00",
+			  "contactPoint": {
+			    "@type": "ContactPoint",
+			    "telephone": "+91(976)-368-339",
+			    "contactType": "technical support"
+			  }
+			}
+ 		</script>
+	
+	{% include 'navbar.html' %}
+	{% block container %}{% endblock %}
+	{% include 'footer.html' %}
+	<!-- jQuery -->
+	<script src="https://use.fontawesome.com/9b7454109a.js"></script>
+	<script src="{% static 'ranger/js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'ranger/js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<!--<script src="{% static 'js/bootstrap.min.js' %}"></script>-->
+	<script src="{% static 'ranger/js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'ranger/js/jquery.waypoints.min.js' %}"></script>
+	<!-- Owl Carousel -->
+	<script src="{% static 'ranger/js/owl.carousel.min.js' %}"></script>
+	<!-- Main JS (Do not remove) -->
+	<script src="{% static 'ranger/js/main.js' %}"></script>
+	<!-- js files NOON -->
+	<script src="{% static 'noon/js/jquery.fancybox.pack.js' %}"></script>
+	<script src="{% static 'noon/js/wow.min.js' %}"></script>
+	<script src="{% static 'noon/js/script.js' %}"></script>
+	
+	</body>
+</html>
