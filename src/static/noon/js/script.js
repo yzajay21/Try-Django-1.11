@@ -60,18 +60,6 @@ responsiveRefreshRate : 200,
 responsiveBaseWidth: window
 
 });
-
-
-
-
-
-
-
-
-<!-- =============================================== -->
-<!-- ========== scrollTop.js ========== -->
-<!-- =============================================== -->
-    
 $('.scrollup').click(function(){
 $("html, body").animate({ scrollTop: 0 }, 2000);
 return false;

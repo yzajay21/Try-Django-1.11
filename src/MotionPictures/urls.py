@@ -21,17 +21,21 @@ from django.views.generic.base import RedirectView
 from django.contrib.auth import views as auth_views
 
 from django.views.generic import TemplateView
+from django.contrib.sitemaps.views import sitemap
 
 
-
-from .settings import base
+from .settings import production
 #from home.views import HomeView
 #import photography.views 
 from softwaredev.views import SoftwareView
 from Webdev.views import WebdevView
-from photography.views import gallary,AlbumDetail
+from photography.views import gallary,AlbumDetail,AlbumSitemap
 from home.views import photo_list
 from contact_form.views import contact
+
+sitemaps = {
+        'photography':AlbumSitemap
+}
 
 urlpatterns = [
 	
@@ -42,5 +46,7 @@ urlpatterns = [
     url(r'^software/',SoftwareView.as_view(),name='SoftwareView'),
     url(r'^webdevelopement/',WebdevView.as_view(),name='WebdevView'),
     url(r'^contact/',contact, name='contact'),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
+    name='django.contrib.sitemaps.views.sitemap'),
     
-] + static(base.MEDIA_URL,document_root=base.MEDIA_ROOT)
+] + static(production.MEDIA_URL,document_root=production.MEDIA_ROOT)

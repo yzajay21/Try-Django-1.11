@@ -8,7 +8,7 @@ from django.contrib import admin
 from django.core.files.base import ContentFile
 #from .settings import base
 from PIL import Image
-import MotionPictures.settings
+
 from .models import Album, AlbumImage
 from .forms import AlbumForm
 
@@ -37,7 +37,7 @@ class AlbumModelAdmin(admin.ModelAdmin):
                     filename = '{0}{1}.jpg'.format(album.slug, str(uuid.uuid4())[-13:])
                     img.image.save(filename, contentfile)
                 
-                    filepath = '{0}/albums/{1}'.format(MotionPictures.settings.MEDIA_ROOT, filename)
+                    filepath = '{0}/albums/{1}'.format(production.MEDIA_ROOT, filename)
                     with Image.open(filepath) as i:
                         img.width, img.height = i.size
 

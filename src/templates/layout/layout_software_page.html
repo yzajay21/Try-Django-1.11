@@ -10,8 +10,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
 	<link rel="shortcut icon" type ="image/png" href="{% static 'images/favicon.png' %}" >
-	<!-- Animate.css -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111313442-1"></script>
+	<script>
+ 		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+		gtag('config', 'UA-111313442-1');
+	</script>
 	
+	<script src="https://use.fontawesome.com/50acb0378f.js"></script>
+
+	<!-- Animate.css -->
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{% static 'ranger/css/animate.css' %}">
 	<link rel="stylesheet" href="{% static 'noon/css/animate.min.css' %}">
 	<!-- Icomoon Icon Fonts-->
@@ -71,7 +82,7 @@
 	{% block container %}{% endblock %}
 	{% include 'footer.html' %}
 	<!-- jQuery -->
-	<script src="https://use.fontawesome.com/9b7454109a.js"></script>
+	
 	<script src="{% static 'ranger/js/jquery.min.js' %}"></script>
 	<!-- jQuery Easing -->
 	<script src="{% static 'ranger/js/jquery.easing.1.3.js' %}"></script>

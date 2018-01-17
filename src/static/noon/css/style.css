@@ -81,6 +81,33 @@ PRE LOADER
 
 
 
+.main_works{
+	padding:120px 0px;
+	overflow:hidden;
+}
+
+.single_works{
+    width: 70%;
+    margin: auto;	
+}
+
+.single_works_deatels{
+	margin-top:20%;
+}
+
+.single_works_deatels i{
+    color: #BD9E6F;
+    font-size: 40px;
+    margin-bottom: 10px;
+    display: inline-block;
+	
+}
+.single_works_deatels h5{
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.single_works_deatels p{}
+
 
 
 

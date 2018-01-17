@@ -1,4 +1,4 @@
-
+from django.contrib.sitemaps import Sitemap
 from django.shortcuts import render
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -36,3 +36,13 @@ class AlbumDetail(DetailView):
 def handler404(request):
     assert isinstance(request, HttpRequest)
     return render(request, 'handler404.html', None, None, 404)
+
+class AlbumSitemap(Sitemap):
+    changefreq = "weekly"
+    priority = 0.7
+
+    def items(self):
+       return Album.objects.all(isActive=True)
+ 
+    def lastmod(self, item): 
+       return item.modifiedDate

@@ -16,7 +16,7 @@
 <div class="container">
   	<div class="row body">
 			<h1>Contact Us</h1>
-			<form method="post" action=''>{% csrf_token %}
+			<form role="form" method="post" action=''>{% csrf_token %}
 			{{ form|crispy }}
 			<input class="btn btn-primary" type="submit"/>
 			</form>
