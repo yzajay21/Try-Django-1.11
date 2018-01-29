@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY','ael7u9sm2eu+xdc-y#tr_)=u0f@j@4!3hd$4hb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://motionpicture.herokuapp.com','.24motionpicture.com']
+ALLOWED_HOSTS = []
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER='ajaymundhe21@gmail.com'
@@ -152,33 +152,32 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
     
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+CORS_REPLACE_HTTPS_REFERER      = False
+HOST_SCHEME                     = "http://"
+SECURE_PROXY_SSL_HEADER         = None
+SECURE_SSL_REDIRECT             = False
+SESSION_COOKIE_SECURE           = False
+CSRF_COOKIE_SECURE              = False
+SECURE_HSTS_SECONDS             = None
+SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
+SECURE_FRAME_DENY               = False
 
-CORS_REPLACE_HTTPS_REFERER      = True
-HOST_SCHEME                     = "https://"
-SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT             = True
-SESSION_COOKIE_SECURE           = True
-CSRF_COOKIE_SECURE              = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
-SECURE_HSTS_SECONDS             = 1000000
-SECURE_FRAME_DENY               = True
 
-
-AWS_ACCESS_KEY_ID = "AKIAIAI7F24VJB42D4ZA"
-AWS_SECRET_ACCESS_KEY = "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"
-AWS_STORAGE_BUCKET_NAME = 'motionpicture-static'
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-AWS_S3_OBJECT_PARAMETERS = {
-    'CacheControl': 'max-age=86400',
-}
-AWS_LOCATION = 'static'
+#AWS_ACCESS_KEY_ID = "AKIAIAI7F24VJB42D4ZA"
+#AWS_SECRET_ACCESS_KEY = "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"
+#AWS_STORAGE_BUCKET_NAME = 'motionpicture-static'
+#AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+#AWS_S3_OBJECT_PARAMETERS = {
+ #   'CacheControl': 'max-age=86400',
+#}
+#AWS_LOCATION = 'static'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-MEDIA_URL ='https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#MEDIA_URL ='https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+#STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+#ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #DEFAULT_FILE_STORAGE='MotionPictures.storage_backends.MediaStore'
-DEFAULT_FILE_STORAGE = 'MotionPictures.settings.aws.utils.MediaRootS3BotoStorage'
+#DEFAULT_FILE_STORAGE = 'MotionPictures.settings.aws.utils.MediaRootS3BotoStorage'

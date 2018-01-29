@@ -1,3 +1,5 @@
+/MotionPictures/settings/base.py
+/MotionPictures/settings/production.py
 .DS_Store
 bin/
 include/
