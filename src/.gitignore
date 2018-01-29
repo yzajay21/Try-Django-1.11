@@ -1,4 +1,6 @@
-/MotionPictures/settings/local.py
+MotionPictures/settings/local.py
+MotionPictures/settings/base.py
+MotionPictures/settings/production.py
 db.sqlite3
 
 .py[cod]
